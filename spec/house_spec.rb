@@ -97,7 +97,7 @@ RSpec.describe House do
       house.add_room(room_4)
 
       expect(house.area).to eq(1900)
-      expect(house.prices_per_sq_ft).to eq(210.53)
+      expect(house.price_per_square_foot).to eq(210.53)
     end
 
     it 'can sort rooms by area' do
