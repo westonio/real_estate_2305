@@ -11,4 +11,12 @@ class Room
   def area
     @length * @width
   end
+
+  def painted?
+    @paint
+  end
+
+  def paint
+    @paint = true
+  end
 end
