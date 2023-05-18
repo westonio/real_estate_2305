@@ -32,4 +32,21 @@
   def details
     {"price" => @price, "address" => @address}
   end
+
+  def price_per_square_foot
+    price_sqft = @price / area.to_f
+    price_sqft.round(2)
+  end
+
+  def rooms_sorted_by_area
+    @rooms.sort do |room| 
+      room.area
+    end
+  end
+
+  def rooms_by_category
+    {bedroom: rooms_from_category(:bedroom),
+    living_room: rooms_from_category(:living_room),
+    basement: rooms_from_category(:basement)}
+  end
  end
