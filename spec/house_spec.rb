@@ -69,6 +69,10 @@ RSpec.describe House do
       room_2 = Room.new(:bedroom, 11, '15')
       room_3 = Room.new(:living_room, 25, '15')
       room_4 = Room.new(:basement, 30, '41')
+      house.add_room(room_1)
+      house.add_room(room_2)
+      house.add_room(room_3)
+      house.add_room(room_4)
 
       expect(house.area).to eq(1900)
     end
@@ -76,7 +80,7 @@ RSpec.describe House do
     it 'provides house details' do
       house = House.new("$400000", "123 sugar lane")
 
-      expect(houde.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
+      expect(house.details).to eq({"price" => 400000, "address" => "123 sugar lane"})
     end
   end
 end
