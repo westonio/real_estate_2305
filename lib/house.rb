@@ -15,7 +15,7 @@
     @price > 500000
   end
 
-  def rooms_by_category(category)
+  def rooms_from_category(category)
     @rooms.select do |room|
       room.category == category
     end
